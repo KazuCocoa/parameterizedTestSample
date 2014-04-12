@@ -23,6 +23,7 @@ GEM
       parser
       unparser
     procto (0.0.2)
+    rantly (0.3.1)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -38,17 +39,18 @@ GEM
       unparser
     slop (3.5.0)
     thread_safe (0.3.3)
-    unparser (0.1.10)
+    unparser (0.1.11)
       abstract_type (~> 0.0.7)
       adamantium (~> 0.2.0)
       concord (~> 0.1.4)
       equalizer (~> 0.0.9)
-      parser (~> 2.1.7)
+      parser (~> 2.1)
       procto (~> 0.0.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  rantly
   rspec
   rspec-parameterized

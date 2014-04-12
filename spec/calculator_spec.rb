@@ -1,7 +1,22 @@
 # coding: utf-8
 require 'rspec-parameterized'
+require 'rantly'
 
 require './calculator'
+
+
+## QuickCheck with Rantly
+describe 'example' do
+#  let(:num_int1) { Rantly { sized(10) { integer } } }
+#  let(:num_int2) { Rantly { sized(10) { integer } } }
+  let(:num_int1) { Rantly { integer } }
+  let(:num_int2) { Rantly { integer } }
+  let(:num_int3) { num_int1 + num_int2 }
+
+  it 'num1 plus num2 is answer' do
+    expect(Calculator.calculator('plus', num_int1, num_int2)).to eq num_int3
+  end
+end
 
 ## parameterized test
 describe '.calculator arithmetic, num1, num2' do
