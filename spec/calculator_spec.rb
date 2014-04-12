@@ -11,10 +11,10 @@ describe 'example' do
 #  let(:num_int2) { Rantly { sized(10) { integer } } }
   let(:num_int1) { Rantly { integer } }
   let(:num_int2) { Rantly { integer } }
-  let(:num_int3) { num_int1 + num_int2 }
+  let(:expect_value) { num_int1 + num_int2 }
 
   it 'num1 plus num2 is answer' do
-    expect(Calculator.calculator('plus', num_int1, num_int2)).to eq num_int3
+    expect(Calculator.calculator('plus', num_int1, num_int2)).to eq expect_value
   end
 end
 
